@@ -1,0 +1,37 @@
+.inbox-page {
+    min-height: 80vh;
+}
+
+.list-group-item {
+    border-radius: 10px;
+    background-color: #bec1b1;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-group-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.message-text {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #6b8bb8;
+    border-color: #4a90e2;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #357ab8;
+    border-color: #357ab8;
+}
+
+.alert-info {
+    background-color: #e2f0fb;
+    color: #31708f;
+    border-radius: 10px;
+    padding: 20px;
+}

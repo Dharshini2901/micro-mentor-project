@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Mentors{% endblock %}
+{% block content %}
+<h2>All Mentors</h2>
+<div class="row">
+    {% for mentor in mentors %}
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ mentor.user.username }}</h5>
+                <p class="card-text">{{ mentor.expertise }}</p>
+                <p class="card-text"><strong>₹{{ mentor.hourly_rate }}/hr</strong></p>
+                <a href="{% url 'book_mentor' %}" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No mentors available.</p>
+    {% endfor %}
+</div>
+{% endblock %}

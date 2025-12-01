@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Profile Already Created{% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2>You have already created your mentor profile!</h2>
+    <p>Thank you for joining the Micro-Mentor Marketplace.</p>
+    <a href="{% url 'dashboard' %}" class="btn btn-primary mt-3">Go to Dashboard</a>
+</div>
+{% endblock %}

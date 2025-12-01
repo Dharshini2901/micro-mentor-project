@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h3>Confirm Booking</h3>
+    <p><strong>Mentee:</strong> {{ booking.mentee.username }}</p>
+    <p><strong>Date:</strong> {{ booking.date }}</p>
+    <p><strong>Time:</strong> {{ booking.time }}</p>
+    <p><strong>Status:</strong> {{ booking.status }}</p>
+
+    {% if booking.status == "pending" %}
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success">Confirm Booking</button>
+            <a href="{% url 'dashboard' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    {% else %}
+        <p>Booking already confirmed by {{ booking.confirmed_by.username }}.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+/* Background and page setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #7f99b4, #a2d4d7);
+    min-height: 100vh;
+}
+/* Card container */
+.register-container {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+/* Form elements */
+.register-form .form-group input,
+.register-form .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.register-form .form-group input:focus,
+.register-form .form-group select:focus {
+    border-color: #66a6ff;
+    box-shadow: 0 0 5px rgba(102, 166, 255, 0.5);
+    outline: none;
+}
+
+/* Buttons */
+.btn-gradient {
+    background: linear-gradient(45deg, #838a95, #89f7fe);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #749b9d, #66a6ff);
+}
+
+/* Headings and text */
+.register-container h2 {
+    color: #333;
+    font-weight: 700;
+}
+
+.register-container p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Links */
+.text-decoration-none {
+    color: #66a6ff;
+    transition: 0.3s;
+}
+
+.text-decoration-none:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

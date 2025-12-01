@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-4">
+ <center>
+        <h2 style="font-size:3rem; font-weight:700; color:#1584a2; margin-bottom:30px;">Dashboard</h2>
+    </center>
+
+    <!-- Bookings Table -->
+    <h4>All Bookings</h4>
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>Mentor</th>
+                <th>Mentee</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for booking in bookings %}
+            <tr>
+                <td>{{ booking.mentor.user.username }}</td>
+                <td>{{ booking.mentee.username }}</td>
+                <td>{{ booking.date }}</td>
+                <td>{{ booking.time }}</td>
+
+                {% if booking.status == "pending" %}
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    {% if user.role == "mentor" and booking.mentor.user == user %}
+                        <td>
+                            <a href="{% url 'confirm_booking' booking.id %}" class="btn btn-sm btn-success">Confirm</a>
+                        </td>
+                    {% else %}
+                        <td>-</td>
+                    {% endif %}
+                {% elif booking.status == "confirmed" %}
+                    <td><span class="badge bg-success">Confirmed</span></td>
+                    <td>by {{ booking.confirmed_by.username }}</td>
+                {% else %}
+                    <td><span class="badge bg-secondary">{{ booking.status }}</span></td>
+                    <td>-</td>
+                {% endif %}
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No bookings found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

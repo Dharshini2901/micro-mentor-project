@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+  body.homepage {
+    background-image: url('https://images.unsplash.com/photo-1591696205602-2edbb0f7b7c5?auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: rgb(233, 229, 229);
+  }
+  .overlay {
+    background-color: rgba(0,0,0,0.6);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  .overlay .btn {
+    margin: 5px;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+  }
+</style>
+
+<div class="homepage">
+  <div class="overlay">
+    <h1>Welcome to Micro-Mentor Learning Platform</h1>
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}!</p>
+        <a href="{% url 'mentor_list' %}" class="btn btn-primary">View Mentors</a>
+        <a href="{% url 'book_mentor' %}" class="btn btn-light">Book a Mentor</a>
+    {% else %}
+        <p>Please <a href="{% url 'login' %}" class="text-warning">login</a> or <a href="{% url 'register' %}" class="text-warning">register</a> to get started.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

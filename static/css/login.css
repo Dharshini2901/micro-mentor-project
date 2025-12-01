@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #7f99b4, #a2d4d7);
+    min-height: 100vh;
+}
+
+.login-page {
+    height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.card {
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+.card h2 {
+    font-weight: 700;
+    color: #3a3a3a;
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+.login-form input {
+    border-radius: 8px !important;
+    padding: 10px !important;
+}
+
+.btn-primary {
+    border-radius: 8px;
+    background-color: #6894a5;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #6db3b4;
+}
+
+.text-decoration-none {
+    color: #0794aa;
+    transition: 0.3s;
+}
+
+.text-decoration-none:hover {
+    color: #60a2a5;
+    text-decoration: underline;
+}

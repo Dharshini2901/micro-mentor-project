@@ -1,0 +1,46 @@
+.message-page {
+    background: linear-gradient(135deg, #0d62b8, #edefef);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-card {
+    max-width: 500px;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.message-form textarea, 
+.message-form input {
+    height: 60px; /* smaller input box */
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+}
+
+.message-form textarea {
+    resize: none;
+}
+
+.btn-primary {
+    background-color: #6184c1;
+    border-color: #476a91;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #357ab8;
+    border-color: #357ab8;
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+}

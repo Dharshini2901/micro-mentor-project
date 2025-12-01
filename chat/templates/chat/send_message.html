@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Send Message{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/message.css' %}">
+
+<div class="message-page">
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+        <div class="card shadow-lg message-card">
+            <div class="card-body p-4">
+                <h2 class="text-center mb-3">Send a Message</h2>
+                <p class="text-center text-muted mb-4">
+                    Reach out to your mentor with your questions or thoughts. They'll see it instantly!
+                </p>
+
+                <form method="post" class="message-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg rounded-pill">Send</button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-3">
+                    <a href="{% url 'inbox' %}" class="btn btn-outline-secondary btn-sm">
+                        ← Back to Inbox
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
