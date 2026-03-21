@@ -8,7 +8,7 @@ Micro-Mentor is a full-stack web application designed to connect students (Mente
 ### 🛠️ Tech Stack
 * **Language:** Python 3.11
 * **Framework:** Django 5.x
-* **Database:** SQLite (Development) / PostgreSQL (Production ready)
+* **Database:** SQLite (Development) 
 * **Environment:** Virtual Environments (venv) & python-decouple
 * **Image Processing:** Pillow
 
