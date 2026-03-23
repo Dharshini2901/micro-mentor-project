@@ -1,42 +1,66 @@
+# Micro Mentor - Peer-to-Peer Mentorship Platform
 
-# Micro-Mentor Project 🚀
-**A Peer-to-Peer Mentorship Platform built with Django**
+A full-stack web application built with Django that connects students (Mentees) with industry professionals (Mentors).
 
-### 🌟 Overview
-Micro-Mentor is a full-stack web application designed to connect students (Mentees) with industry professionals (Mentors). It simplifies the process of finding guidance through role-based access, professional profiles, and a streamlined request system.
+## Live Demo
+- Website: https://micro-mentor-project.onrender.com
+- API: https://micro-mentor-project.onrender.com/api/mentors/
+- Admin: https://micro-mentor-project.onrender.com/admin/
 
-### 🛠️ Tech Stack
-* **Language:** Python 3.11
-* **Framework:** Django 5.x
-* **Database:** SQLite (Development) 
-* **Environment:** Virtual Environments (venv) & python-decouple
-* **Image Processing:** Pillow
+## Screenshots
 
-### 🔑 Key Features
-* **Dual-Role Authentication:** Specialized signup for Mentors and Mentees using a Custom User Model.
-* **Mentorship Requests:** Mentees can send connection requests which Mentors can approve or decline via their dashboard.
-* **Dynamic Profiles:** Users can manage biographies, skills, and profile pictures.
-* **Security First:** Implemented environment variables (`.env`) to protect sensitive API keys and secrets.
-* **Admin Dashboard:** Built-in Django Admin integration for site-wide data management.
+### Home Page
+![Home](static/images/screenshot/home.png)
 
-### 🚀 How to Run Locally
-1. **Clone the repo:**
-   ```bash
-   git clone [https://github.com/Dharshini2901/micro-mentor-project.git](https://github.com/Dharshini2901/micro-mentor-project.git)
-   ```
-2. **Create & Activate Virtual Environment:**
-   ```bash
-   python -m venv venv
-   .\venv\Scripts\activate
-   ```
-3. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. **Setup Environment Variables:**
-   Create a `.env` file and add your `SECRET_KEY`.
-5. **Run Migrations & Start Server:**
-   ```bash
-   python manage.py migrate
-   python manage.py runserver
-   ```
+### Login Page
+![Login](static/images/screenshot/login.png)
+
+### Registration Page
+![Registration](static/images/screenshot/registration.png)
+
+### REST API
+![API](static/images/screenshot/api.png)
+
+### Admin Panel
+![Admin](static/images/screenshot/admin.png)
+
+## Tech Stack
+- Language: Python 3.11
+- Framework: Django 5.x
+- REST API: Django REST Framework
+- Database: SQLite (Dev) / PostgreSQL (Production)
+- Deployment: Render
+- Static Files: WhiteNoise
+
+## Features
+- Dual-role authentication (Mentor and Mentee)
+- Role-specific dashboards
+- Mentorship request system
+- Dynamic profile management
+- REST API with 4 endpoints
+- Django Admin panel
+- 17 automated tests
+
+## API Endpoints
+- GET /api/mentors/ - List all mentors
+- GET /api/mentors/id/ - Get mentor detail
+- GET /api/bookings/ - List all bookings
+- GET /api/users/ - List all users
+
+## Run Locally
+git clone https://github.com/Dharshini2901/micro-mentor-project.git
+cd micro-mentor-project
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
+## Run Tests
+python manage.py test
+
+## Developer
+Dharshini DR - Python/Django Developer
+GitHub: https://github.com/Dharshini2901
+Email: dharshinidr05@gmail.com
+LinkedIn: https://linkedin.com/in/dharshini-d-r-33158b255
